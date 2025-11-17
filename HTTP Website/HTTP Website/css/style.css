@@ -1,0 +1,299 @@
+/*******************************
+ Mallory Pulliam
+ IT 3203 - Intro to Web Development
+ CSS Style File
+ *******************************/
+
+/* Overall webpage styling - Element Selector*/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container for webpage - Class Selector*/
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+header {
+    background: #75a1bd;
+    color: #ffffff;
+    padding: 20px 0 ;
+    min-height: 70px;
+    text-align: center;
+}   
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation styling */
+nav {
+    background: #e48c73;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none; /* No bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the nav items */
+}   
+
+/* Space between nav items */
+nav ul li {
+    margin: 0 5px; 
+}   
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styling for tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Hover function for better readability */
+tbody tr:hover {
+    background-color: #f9f9f9;
+}   
+
+/* Link styling (Pseudo-class Selector) */
+nav a:hover {
+    background-color: #ffffff;
+    color: #c97c64;
+}
+
+/* Styling for main content and footer */
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #746c6c;
+    border-top: 20px;
+    font-size: small;
+}
+
+/* Styling for key terms */
+dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/************************* 
+Quiz styling 
+**************************/
+
+/* Apply monospace font to the quiz page */
+.quiz-page {
+    font-family: 'Courier New', monospace;
+}
+
+/* Form container */
+#quizForm {
+    margin-top: 20px;
+    background-color: lightgray; 
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* Question groups */
+#quizForm fieldset {
+    background-color: #fcfcfc;
+    border: 2px solid darkgray; 
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+#quizForm legend {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    padding: 0 10px;
+    margin-left: 10px;
+}
+
+#quizForm p {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Text Input box */
+#quizForm input[type="text"] {
+    padding: 12px;
+    border: 2px solid darkgray;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace; 
+    font-size: 1em;
+}
+
+/* Interactive Styling */
+
+/* Hide radio/checkbox buttons */
+#quizForm input[type="radio"],
+#quizForm input[type="checkbox"] {
+    display: none;
+}
+
+/* Clickable button label */
+#quizForm input[type="radio"] + label,
+#quizForm input[type="checkbox"] + label {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border: 2px solid darkgray; 
+    border-radius: 20px;
+    background-color: #fff;
+    color: rgb(22, 22, 22);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Hover effects */
+#quizForm input[type="radio"] + label:hover,
+#quizForm input[type="checkbox"] + label:hover {
+    transform: scale(1.02); 
+    background-color: #f0f0f0;
+}
+
+/* Selected for radio and checkboxes */
+#quizForm input[type="radio"]:checked + label,
+#quizForm input[type="checkbox"]:checked + label {
+    background: paleturquoise; 
+    border-color: #009999;
+}
+
+
+/* Control button */
+.quiz-controls button {
+    width: 48%;
+    padding: 12px 20px;
+    border: 2px solid gray; 
+    border-radius: 10px;
+    background: none;
+    color: rgb(25, 25, 25);
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease;
+}
+
+.quiz-controls button:hover {
+    background-color: #e0e0e0;
+}
+
+.quiz-controls button#submitBtn {
+    background-color: #75a1bd; 
+    color: white;
+    border-color: #75a1bd;
+}
+
+.quiz-controls button#resetBtn {
+    background-color: #e48c73; 
+    color: white;
+    border-color: #e48c73;
+}
+
+/************************* 
+Quiz results styling 
+**************************/
+
+#quizResults {
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+/* Result box for questions */
+.question-result {
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+}
+
+.question-result p {
+    margin: 5px 0;
+    font-weight: 400; 
+}
+
+.question-result p strong {
+    font-weight: 600;
+}
+
+/* Style - Correct answers */
+.question-result.correct {
+    background-color: #e6f7e6;
+    border-color: #5cb85c; 
+}
+
+/* Style - Incorrect answers */
+.question-result.incorrect {
+    background-color: #f9e6e6;
+    border-color: #d9534f;
+}
+
+/* Final Score Styling + Pass/Fail */
+.final-score {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #333;
+}
+
+.pass {
+    color: #5cb85c;
+    font-weight: 600;
+}
+
+.fail {
+    color: #d9534f;
+    font-weight: 600;
+}

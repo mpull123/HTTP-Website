@@ -1,0 +1,117 @@
+<!!-- 
+ Mallory Pulliam
+ IT 3203 - Intro to Web Development
+ Quiz File  --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP: Past, Present, & Future</title>
+    <link rel="stylesheet" href="css/style.css">
+</html>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>History, Development, & Future of HTTP</h1>
+        </header>
+
+        <nav>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">HTTP History</a></li>
+                    <li><a href="httptoday.html">HTTP Today</a></li>
+                    <li><a href="concepts.html">Key Concepts</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>    
+                </ul> 
+        </nav>
+
+        <main>
+            <h2>HHTP Knowledge Quiz</h2>
+            <p>Test your knowledge on HTTP history and concepts with the following quiz questions!</p>
+                
+            <form id="quizForm">
+                
+                <fieldset>
+                    <legend>Question 1: Fill in the Blank</legend>
+                    <label for="q1">Who first introduced HTTP in 1989 at CERN?</label>
+                    <input type="text" id="q1" name="q1">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 2: Multiple Choice</legend>
+                    <p>What was the *only* command available in the first version, HTTP/0.9?</p>
+                    <input type="radio" id="q2a" name="q2" value="get">
+                    <label for="q2a">GET</label>
+                    <input type="radio" id="q2b" name="q2" value="post">
+                    <label for="q2b">POST</label>
+                    <input type="radio" id="q2c" name="q2" value="put">
+                    <label for="q2c">PUT</label>
+                    <input type="radio" id="q2d" name="q2" value="connect">
+                    <label for="q2d">CONNECT</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 3: Multiple Choice</legend>
+                    <p>Which version of HTTP introduced "persistent connections" (keep-alive)?</p>
+                    <input type="radio" id="q3a" name="q3" value="http0.9">
+                    <label for="q3a">HTTP/0.9</label>
+                    <input type="radio" id="q3b" name="q3" value="http1.0">
+                    <label for="q3b">HTTP/1.0</label>
+                    <input type="radio" id="q3c" name="q3" value="http1.1">
+                    <label for="q3c">HTTP/1.1</label>
+                    <input type="radio" id="q3d" name="q3" value="http2">
+                    <label for="q3d">HTTP/2</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 4: Multiple Choice</legend>
+                    <p>What new transport protocol, which uses UDP, was introduced with HTTP/3?</p>
+                    <input type="radio" id="q4a" name="q4" value="tcp">
+                    <label for="q4a">TCP</label>
+                    <input type="radio" id="q4b" name="q4" value="quic">
+                    <label for="q4b">QUIC</label>
+                    <input type="radio" id="q4c" name="q4" value="hpack">
+                    <label for="q4c">HPACK</label>
+                    <input type="radio" id="q4d" name="q4" value="ssl">
+                    <label for="q4d">SSL</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 5: Multiple Selection</legend>
+                    <p>Which of the following were new features introduced in HTTP/2? (Select all that apply)</p>
+                    <input type="checkbox" id="q5a" name="q5" value="multiplexing">
+                    <label for="q5a">Multiplexing</label>
+                    <input type="checkbox" id="q5b" name="q5" value="serverpush">
+                    <label for="q5b">Server Push</label>
+                    <input type="checkbox" id="q5c" name="q5" value="quic">
+                    <label for="q5c">QUIC Protocol</label>
+                    <input type="checkbox" id="q5d" name="q5" value="headercompression">
+                    <label for="q5d">Header Compression</label>
+                </fieldset>
+
+                <div class="quiz-controls">
+                    <button type="submit" id="submitBtn">Submit Quiz</button>
+                    <button type="reset" id="resetBtn">Retake Quiz</button>
+                </div>
+            </form>
+
+            <div id="quizResults"></div>
+
+        </main>
+
+        <footer>
+            <p>This webpage is for a Intro to Web Development class project and was developed by Mallory Pulliam. <a href="https://ksuweb.github.io/IT3203/"> KSU Web Development Class Website</a></p>
+        </footer>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
+                        
