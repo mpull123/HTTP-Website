@@ -1,0 +1,296 @@
+/*******************************
+ Mallory Pulliam
+ IT 3203 - Intro to Web Development
+ CSS Style File
+ *******************************/
+
+/* Global variables for color palette */
+:root {
+    --primary-color: #2c3e50; /* Deep Navy */
+    --accent-color: #2980b9; /* Professional Blue */
+    --light-bg: #f4f6f7; /* Soft grey-blue background */
+    --white: #ffffff;
+    --text-color: #333333; /* Dark Grey text */
+    --shadow: 0 4px 10px rgba(0,0,0,0.08); /* Subtle shadow */
+    --radius: 6px; /* Rounded corners */
+}
+
+/* Overall webpage tyling - Element Selector*/
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+/* Container for webpage - Class Selector*/
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 30px auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-top: 5px solid var(--accent-color);
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}   
+
+header h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 2.4rem;
+}
+
+/* Navigation styling */
+nav {
+    background: var(--primary-color);
+    border-radius: var(--radius);
+    padding: 12px;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style: none; /* No bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the nav items */
+    flex-wrap: wrap;
+}   
+
+/* Space between nav items */
+nav ul li {
+    margin: 0 5px; 
+}   
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 10px 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Link styling (Pseudo-class Selector) */
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+/* Mobile menu button (Hidden on desktop) */
+.menu-toggle {
+    display: none;
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    font-family: Georgia, serif;
+}
+
+/* Styling for main content headers */
+h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--primary-color);
+    margin-top: 30px;
+}
+
+h2 {
+    border-bottom: 2px solid var(--light-bg);
+    padding-bottom: 10px;
+}
+
+/* Styling for responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    display: block;
+    margin: 20px auto;
+    box-shadow: var(--shadow);
+}
+
+/* Styling for key terms */
+dt {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-top: 20px;
+    font-size: 1.15rem;
+}
+
+dd {
+    margin-left: 0;
+    padding-left: 15px;
+    border-left: 3px solid #ddd;
+}
+
+/* Styling for tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    display: block;
+    overflow-x: auto;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: Georgia, serif;
+}
+
+/* Hover function for better readability */
+tbody tr:hover {
+    background-color: #f9f9f9;
+}   
+
+/************************* 
+Quiz styling 
+**************************/
+
+/* Form container */
+form#quizForm fieldset {
+    background: #fdfdfd; 
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Question legend styling */
+legend {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    color: var(--accent-color);
+    padding: 0 10px;
+}
+
+/* Text Input box */
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Control button styling */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+button[type="reset"] {
+    background-color: #95a5a6;
+}
+
+/************************* 
+Quiz results styling 
+**************************/
+
+/* Result box for questions */
+.question-result {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+}
+
+/* Style - Correct answers */
+.question-result.correct {
+    background-color: #e8f5e9;
+    border-color: #c8e6c9; 
+    color: #2e7d32;
+}
+
+/* Style - Incorrect answers */
+.question-result.incorrect {
+    background-color: #ffebee;
+    border-color: #ffcdd2;
+    color: #c62828;
+}
+
+/************************* 
+Responsive Design (Media Query)
+**************************/
+
+/* Mobile settings for screens under 768px */
+@media screen and (max-width: 768px) {
+    
+    /* Change layout for mobile container */
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+        border-top: none;
+    }
+    
+    /* Show the hamburger menu button */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide links by default on mobile */
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    /* Show links when active class is added */
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav a {
+        display: block;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    /* Stack buttons for mobile */
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
